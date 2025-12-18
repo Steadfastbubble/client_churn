@@ -1,0 +1,16 @@
+# Manipulación y Análisis de Datos
+pandas
+numpy
+
+# Visualización de Datos
+matplotlib
+seaborn
+
+# Machine Learning y Métricas (Scikit-Learn incluye modelos y preprocesamiento)
+scikit-learn
+
+# Modelos de Gradient Boosting
+lightgbm
+
+# Entorno de trabajo (Para ejecutar el archivo .ipynb)
+ipykernel
