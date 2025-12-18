@@ -57,3 +57,22 @@ Si tienes interés en discutir este modelo o explorar colaboraciones en Data Sci
 
 * **LinkedIn:** [https://www.linkedin.com/in/fernando-garza-trevino/]
 * **Email:** ferngarzau@gmail.com
+
+
+## Algunas preguntas y desafíos que enfrenté
+**¿Qué pasos del plan se realizaron y qué pasos se omitieron (explica por qué)?**
+Limpieza: Primero me dedique a la limpieza de los datos esto incluye cambiar los tipos de datos de las columnas a los correctos y eliminar posibles columnas que no son necesarias para el entrenamiento del mismo. De igual manera uni de una manera optima todos los dataframes en uno mismo utilizando el customerID() como indice para luego ya que este todo junto, eliminar dicha columna.  
+
+Exploracion extra: Despues de tener los tipos de datos corregidos, pude hacer un analisis mas extenso y profundo basado en las fechas, valores objetivo y observacion del dataframe general ya junto y limpio, esto incluye analisis de abandonos por fechas, churn rate, graficas que muestran las fechas imoprtantes de abandono y observacion de variables ausentes.
+
+Preparacion del modelo: Utilizamos 4 distintos modelos para explorar la mejora de rendimientos y cual es el tipo de opcion a tomar correcto. En este paso hicimos varias pruebas para determinar el funcionamiento mas optimo de los modelos y como ir mejorandolos.
+
+Resultados: Los resultados mostraron con claridad cual es el modelo con mejor rendimiento y mis recomendaciones a futuro y el mejoramiento de modelos futuros.
+
+Al principio tuve problemas al unir los datos usando el parametro "inner", esto no causó tanto problema por que logré identificar rapido el problema y lo solucione al cambiar al tipo de unión a "outer" que es el correcto para no perder los datos importantes pero ausentes. Otra dificultad que encontré fué al momento de crear los modelos, inicialmente daban un rendimiento muy bajo, es decir, la curva AUC-ROC no daba los resultados esperados ya que no subia de 0.82 de precisión. La solucion que implemente para esto fué experimentar con los parámetros iniciales de cada modelo para luego decidir añadir mejores columnas mediante la práctica de ingenieria de caracterisiticas y asi de tal manera ayudar a los modelos a centrarse en una linea mas coherente a la hora de producir resultados y nuevas predicciones.
+
+**Pasos Clave**
+En mi opinión lo que ayudó a que los modelos funcionaran muy bien y mejorarán su rendimiento fué definitivamente transformar correctamente los datos mediante técnicas como OHE, transformacion de columnas binarias, escalacion estandar (para no afectar los datos de entrenamiento y pulir los sesgos del modelo) y la mas importante, creación de columnas extras que ayudaron exponencialmente a los modelos a identificar de una manera mas eficaz todas las clases a predecir.
+
+**¿Cuál es tu modelo final y qué nivel de calidad tiene?**
+Al final fueron 4 modelos: Regresión logística LightGBM Bosque clasificatorio Arbol de decision, el mejor siendo la simple regresion logistica con AUC-ROC de 0.9308 en la prueba y exactitud de 0.8883.
